@@ -1,0 +1,29 @@
+
+add_namespace = USA_space
+news_event = {
+	id = marslanding.1 # The unique id. nuke_dropped is the namespace, which can be used for better organization, and is used in localisation.
+	picture = GFX_news_event_mars_landing
+                  desc = mars_landing_done
+
+	major = yes # Optional : if set to "yes" every country in the world will see this event
+
+	is_triggered_only = yes # Optional : if set to "yes" the event will only occur by command
+
+	hidden = no # Optional : if set to "yes" no one will see the event
+
+	fire_only_once = yes # Optional : if set to "yes" the event will never occur more than once
+
+	immediate = { # Optional : all the following will occur once the event occurs
+		if = {
+			has_completed_focus
+                                                   = USA_mars_landing
+		}
+		news_event = { id = nuke_dropped.1 days = 1 }
+	}
+	
+
+        option = { # This is an example of an option that has a function ( usually not done on a news event )
+		name = mars_landing.1.a # The localisable text that appears on the button.
+                add_political_power = 100
+	}
+}

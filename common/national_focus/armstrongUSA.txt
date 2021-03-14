@@ -1,0 +1,28 @@
+focus_tree = {
+	id = usa_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+	#Focus for Mars Landing
+	focus = {
+		id = USA_mars_landing
+		icon = GFX_focus_rocketry
+		x = 5
+		y = 0
+		cost = 15
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			news_event= marslanding.1
+		}
+	}
+
+#End of focuses 
+ }
